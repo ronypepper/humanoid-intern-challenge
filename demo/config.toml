@@ -1,0 +1,65 @@
+# General configurations
+[general]
+gripper_hand = "Left"  # must be "Left" or "Right"
+handlandmarker_model_asset_path = "assets/hand_landmarker.task"
+visualize_hands = true
+
+# Camera configuration for hand tracking camera 1
+[camera_hands_a]
+device_id = 1
+width = 1920
+height = 1080
+calibration_path = "demo/macbook_1920x1080_calibration.npz"
+
+# Camera configuration for hand tracking camera 2
+[camera_hands_b]
+device_id = 0
+width = 1920
+height = 1080
+calibration_path = "demo/kyio_1920x1080_calibration.npz"
+
+# Camera configuration for object detection camera
+# This configuration can either be the same as camera_hands_a or camera_hands_b, or a completely different camera.
+[camera_objects]
+device_id = 0
+width = 1920
+height = 1080
+calibration_path = "demo/kyio_zero_1920x1080_calibration.npz"
+
+# World origin configuration
+[origin]
+origin_offset = [0.075, 0.105, 0.0]
+
+# World origin charuco board configuration
+[origin.charuco]
+columns = 5
+rows = 7
+square_size = 0.030  # meters
+marker_size = 0.015  # meters
+aruco_dict = "DICT_4X4_250"  # must be a key of ARUCO_DICTIONARIES from charuco_board_tracker.py
+aruco_dict_offset = 0
+
+# Objects common charuco board configuration
+[objects.charuco]
+columns = 4
+rows = 3
+square_size = 0.016  # meters
+marker_size = 0.010  # meters
+aruco_dict = "DICT_4X4_250"  # must be a key of ARUCO_DICTIONARIES from charuco_board_tracker.py
+
+# List of objects with their specific configuration below.
+# For more objects just add [[object]] sections
+[[object]]
+name = "box"
+origin_offset = [0.032, 0.024, 0.019]
+aruco_dict_offset = 100
+
+# [[object]]
+# name = "box_2"
+# origin_offset = [0.042, 0.032, 0.019]
+# aruco_dict_offset = 106
+
+# [[object]]
+# name = "box_3"
+# origin_offset = [0.042, 0.032, 0.019]
+# aruco_dict_offset = 118

@@ -1,0 +1,12 @@
+name: humanoid-intern-challenge-data
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - numpy
+  - pip
+  - pip:
+    - open3d
+    - opencv-python
+    - mediapipe
+    - h5py
