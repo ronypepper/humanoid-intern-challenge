@@ -18,6 +18,10 @@ Below you can find example images/videos of the pipeline in action, as well as i
 
 ![Detections](media/detections.png)
 
+<img width="2672" height="824" alt="demonstration" src="https://github.com/user-attachments/assets/f157177e-2e0d-418d-bd68-825890a248bd" />
+
+https://github.com/user-attachments/assets/28a4de9b-9152-4f41-8664-51661631769b
+
 ## Installation
 
 The system has been tested on Mac, but should also work on Linux.
